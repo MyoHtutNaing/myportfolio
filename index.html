@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Portfolio Profile</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <script src="https://code.jquery.com/jquery-git.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <style>
+  td{
+  padding-top:10px;
+  }
+  table{
+  border:0;}
+  #eml{
+  color:white;}
+  .PULSE {
+   /* Chrome, Safari, Opera */
+  -webkit-animation: PULSE 1s infinite; 
+  
+  /* Internet Explorer */
+  -ms-animation: PULSE 1s infinite;
+  
+  /* Standard Syntax */
+  animation: PULSE 1.25s infinite; 
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes PULSE{
+   0%{color:rgba(255,0,255);}	
+	110%{color: black;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes PULSE{
+  0%{color:rgba(255,255,0);}	
+	110%{color: black;}
+}
+
+/* Standard Syntax */
+@keyframes PULSE{
+  0%{color:rgba(0,255,255);}	
+	110%{color: black;}
+}
+  .row{
+  color:white;
+  font-size:20px;}
+    #loader {
+            border: 12px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 12px solid #444444;
+            width: 70px;
+            height: 70px;
+            animation: spin 1s linear infinite;
+        }
+          
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+          
+        .center {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+.jumbotron{
+background-color:white;}
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    li{
+    font-size:20px;}
+    kbd {
+  border-radius: 20px;
+  padding: 2px;
+  border: 1px solid white;
+  background-color:#41B3A3;
+  color:white;
+}
+
+    body{     margin-right: -15px;
+    margin-left: -15px;
+     background-color: white;
+     font-family: 'EB Garamond';
+     }
+    .cardeachone{
+    position: relative;
+  animation-name: fromltr;
+  animation-duration: 1s;
+   box-shadow: 15px 15px #d4d1c9;
+  }
+  .cardeachtwo{
+    position: relative;
+  animation-name: fromrtl;
+  animation-duration: 1s;
+   box-shadow: 15px 15px #d4d1c9;
+  }
+  
+@keyframes fromrtl {
+  0%  {left:200px; top:0px;}
+    100%   {left:0px; top:0px;}
+
+}
+@keyframes fromltr {
+ 0%   {left:-100px; top:0px;}
+  100%  {left:0px; top:0px;}
+    
+}
+    .col-sm-5{
+    padding:50px;
+    margin:center;
+    background-color:#41B3A3;
+     border-radius: 25px;
+        box-shadow: 15px 15px #d4d1c9;
+     }
+     .col-sm-12{
+     text-align:left;
+    padding:50px;
+    margin:center;
+    background-color:#41B3A3;
+     border-radius: 25px;
+        box-shadow: 15px 15px #d4d1c9;
+          position: relative;
+  animation-name: downtu;
+  animation-duration: 1s;
+     }
+     
+@keyframes downtu {
+ 0%   {left:-100px; top:0px;}
+  100%  {left:0px; top:0px;}
+    
+}
+
+    .container-fluid{
+      background-color: #41B3A3;
+    
+    }   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #41B3A3;
+      padding: 25px;
+    }
+    #matthewlogo{
+      transition: width 1s, height 1s;
+       border-radius: 25px;
+       
+      }
+     #matthewlogo:hover {
+	  width: 300px;
+ 	  height: 300px;
+	}
+
+	#logotitle{
+	font-size:40px;
+	display:none;
+	}
+  </style>
+</head>
+<body>
+<script>
+document.onreadystatechange = function() {
+    if (document.readyState !== "complete") {
+        document.querySelector("body").style.visibility = "hidden";
+        document.querySelector("#loader").style.visibility = "visible";
+    } else {
+        document.querySelector("#loader").style.display = "none";
+        document.querySelector("body").style.visibility = "visible";
+    }
+};
+
+$(document).ready(function(){
+	var onicon=1;
+	 $(".col-sm-5").hover(function () {
+		    $(this).css({opacity: '0.7'});
+	 },function(){    $(this).css({opacity: '1'});})
+	
+
+	$('.cardeachone').css('cursor', 'pointer');
+	$('.cardeachtwo').css('cursor', 'pointer');
+	$('.clicka').css('cursor', 'pointer');
+
+	 $(".nav-tabs a").click(function(){
+		    $(this).tab('show');
+		  });
+	 
+ $("#matthewlogo").hover(function () {
+	onicon=0;
+	  $("#matthewlogo").removeAttr("style");
+
+	 $("#logotitle").fadeIn(1000);
+	},
+function () {
+	 $("#logotitle").hide();
+onicon=1;
+}) 
+ /*  $("#matthewlogo").mouseover(function(){
+		 $("#logotitle").fadeIn(1000);
+  }); 
+  $("#matthewlogo").mouseout(function(){
+		 $("#logotitle").hide();
+	  });*/
+$("#forhdr").hover(function () {
+	
+	if(onicon==0){}else{
+	setTimeout(function blink(){$("#matthewlogo").css("background-color", "#e4eff0");}, 500);
+	setTimeout(function blink(){ $("#matthewlogo").removeAttr("style");}, 1000);
+	}
+
+},
+function () {
+	  $("#matthewlogo").removeAttr("style");
+
+})
+});
+
+</script>
+ <div id="loader" class="center"></div>
+ 
+     
+     
+<div class="modal fade" id="ucst">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <center> <h2 class="modal-title">University Of Computer Studies, Taunggyi.</h2></center>
+        </div>
+        <div class="modal-body">
+ <div class="row"><div class="col-md-12"> <img src="ucst1.jpg" width="570" height="330"/> </div></div>
+ 
+         <h3>University Of Computer Studies, Taunggyi is a university in Myanmar. I passed the matriculation exam in 2016 and joined the university as a computer science student. I was doing pretty well academically. During my third year of university, all universities all over the country were forced to close due to COVID crisis. Additionally, military coup took place in Myanmar. Since at that time, this university couldn't start till now. </h3>
+         </div>
+        <div class="modal-footer">
+        
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      
+  </div>
+  </div>
+  
+    </div> 
+        
+<div class="modal fade" id="uop">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <center> <h2 class="modal-title">University Of People</h2></center>
+        </div>
+        <div class="modal-body">
+ <div class="row"><div class="col-md-12"> <img src="uop1.jpeg" width="570" height="330"/> </div></div>
+ 
+         <h3>University of the People is an American accredited, online university. I'm currently going for bachelor's degree of computer science. </h3>
+         </div>
+        <div class="modal-footer">
+        
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      
+  </div>
+  </div>
+  
+    </div> 
+    
+           
+<div class="modal fade" id="robo">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <center> <h2 class="modal-title">Roboleague 2019</h2></center>
+        </div>
+        <div class="modal-body">
+ <div class="row"><div class="col-md-12"> <img src="robol.jpg" width="570" height="330"/> </div></div><br>
+ <div class="row"><div class="col-md-12" style="text-align:center;"> <img src="robo.png" width="300" height="300"/> </div></div>
+ 
+         <h3>RoboLeague 2019 was held in Yangon, Myanmar. The winning team represented Myanmar in a Global Robotics Challenge held in UAE. Our team which is Shan representative, managed to be top 8. I used Scratch programming for coding.
+       <a href="https://elevenmyanmar.com/news/first-myanmar-roboleague-2019-held-in-yangon">For more info</a></h3>
+         </div>
+        <div class="modal-footer">
+        
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      
+  </div>
+  </div>
+  
+    </div> 
+    
+             
+<div class="modal fade" id="itc">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <center> <h2 class="modal-title">IT Contest 2019</h2></center>
+        </div>
+        <div class="modal-body">
+ <div class="row"><div class="col-md-12"> 
+<iframe width="570" height="335" src="https://www.youtube.com/watch?v=Q0R94mVwH50">
+</iframe> </div></div><center><p>Youtube video link</p></center><br>
+
+ 
+         <h3>IT contest is organized by Willtec Myanmar Co., Ltd. and University of Information Technology and held in Yangon. Its main objective was problem solving. I participated in that contest and solved 80% of the problems. I used Scratch programming.
+       <a href="https://myanmarinternationaltv.com/news/it-contest-2019-very-first-myanmar-it-contest-technological-students">For more info</a></h3>
+         </div>
+        <div class="modal-footer">
+        
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      
+  </div>
+  </div>
+  
+    </div> 
+    
+          
+<div class="modal fade" id="deli">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <center> <h2 class="modal-title">Delivery Management System</h2></center>
+        </div>
+        <div class="modal-body">
+ <div class="row"><div class="col-md-12"> <img src="deliv.png" width="570" height="590"/> </div></div>
+ 
+         <h3>In my second year of university, I joined a freelance team and developed a beta version of delivery management system for an enterprise. As it's a web app, I used html, css, java, javascript, jsp, ajax, sql, jquery and many more.</h3>
+         </div>
+        <div class="modal-footer">
+        
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      
+  </div>
+  </div>
+  
+    </div> 
+            
+<div class="modal fade" id="yt">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <center> <h2 class="modal-title">Matthew Mio ( Youtube Channel )</h2></center>
+        </div>
+        <div class="modal-body">
+ <div class="row"><div class="col-md-12"> <img src="yt.png" width="570" height="330"/> </div></div>
+ 
+         <h3>I started my Youtube channel in January 2022. Despite having no subscribers, I feel proud for what I have put my effort into.</h3>
+         </div>
+        <div class="modal-footer">
+        
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      
+  </div>
+  </div>
+  
+    </div> 
+    <div class="modal fade" id="efs">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <center> <h2 class="modal-title">EF SET</h2></center>
+        </div>
+        <div class="modal-body">
+ <div class="row"><div class="col-md-12"> <img src="efset.png" width="570" height="530"/> </div></div>
+ 
+         <h3>EF SET is affordable, free ,reliable and standardized Online English proficiency test for non native speakers. <a href="https://www.efset.org/">For more info</a></h3>
+         </div>
+        <div class="modal-footer">
+        
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      
+  </div>
+  </div>
+  
+    </div> 
+    
+     <div class="modal fade" id="brit">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <center> <h2 class="modal-title">British Council English Score</h2></center>
+        </div>
+        <div class="modal-body">
+ <div class="row"><div class="col-md-12"> <img src="british.png" width="570" height="530"/> </div></div>
+ 
+         <h3>British Council EnglishScore is a quick and accurate test of your English level. The test assesses your proficiency in grammar, vocabulary, reading and listening and can be used for self-improvement, to prove your level to an employer or to prepare for a test such as IELTS. <br> <a href="https://www.britishcouncil.org/english/learn-online/englishscore" >Ref</a></h3>
+         </div>
+        <div class="modal-footer">
+        
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      
+  </div>
+  </div>
+  
+    </div> 
+    
+    <div class="modal fade" id="camb">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <center> <h2 class="modal-title">Cambridge Assessment English</h2></center>
+        </div>
+        <div class="modal-body">
+ <div class="row"><div class="col-md-12"> <img src="cambridge.png" width="570" height="530"/> </div></div>
+ 
+         <h3>Cambridge Assessment English or Cambridge English develops and produces Cambridge English Qualifications and the International English Language Testing System.<br>Ref : Wikipedia</h3>
+         </div>
+        <div class="modal-footer">
+        
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      
+  </div>
+  </div>
+  
+    </div> 
+    
+     <div class="modal fade" id="llll">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <center> <h2 class="modal-title">Cambridge Assessment English</h2></center>
+        </div>
+        <div class="modal-body">
+ <div class="row"><div class="col-md-12"> <img src="lascc.jpg" width="570" height="530"/> </div></div>
+ 
+         <h3>LASC's academic programs are designed around Cambridge English Assessment's standards of language proficiency. LASC's academic programs are designed around Cambridge English Assessment's standards of language proficiency. Our textbook based curriculum teaches the most common and frequently used words and structures.<br> <a href="https://lascusa.com/lasc-english-school/">Ref</a></h3>
+         </div>
+        <div class="modal-footer">
+        
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      
+  </div>
+  </div>
+  
+    </div> 
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+  <div class="container-fluid border border-0" id="forhdr">
+    <div class="navbar-header">
+       <img src="mmio.jpg" width="60" height="60" id="matthewlogo"/> 
+      </div>
+    
+    <div id="logotitle"><kbd>Matthew Mio</kbd></div>
+   </div>
+
+ 
+  
+<div class="jumbotron">
+  <div class="container text-center">
+ 
+    <h1>Matthew's Portfolio</h1>      
+    <p class="PULSE">Thanks for taking a peak at my portfolio. Feel free to look around.</p>
+     <ul class="nav nav-tabs">
+    <li class="active"><a href="#intro">Self-introduction</a></li>
+    <li><a href="#edu">Academic Education</a></li>
+    <li><a href="#achi">Achievements</a></li>
+    <li><a href="#eng">English Proficiency</a></li>
+  </ul>
+  </div>
+</div>
+   <div class="container text-center">
+   <div class="tab-content">
+    <div id="intro" class="tab-pane fade in active">
+      
+  <div class="row">
+    <div class="col-sm-12">
+    <h2><i style="font-size:33px" class="fa">&#xf2c0;</i> Profile</h2>
+<table><tr><td><b><i style="font-size:20px" class="fa">&#xf15d;</i> Name </b></td><td>: Matthew Mio (aka. Myo Htut Naing )</td></tr>
+    <tr><td><b><i style="font-size:20px" class="material-icons">&#xe894;</i>Nationality</b></td><td>: Myanmar</td></tr>
+    <tr><td><b><i style="font-size:20px" class="material-icons">&#xe8ae;</i> Age </b></td><td>: 21</td></tr>
+    <tr><td><b><i style="font-size:20px" class="material-icons">&#xe8f9;</i> Occupation </b></td><td>: Developer (Unemployed) , An undergraduate Student</td></tr>
+    <tr><td><b><i style="font-size:20px" class="material-icons">&#xe30a;</i> Major </b></td><td>: Computer Science</td></tr>
+    <tr><td><b><i style="font-size:20px" class="fa">&#xf1ab;</i> Language </b></td><td>: Myanmar, English</td></tr>
+    <tr><td><b><i style="font-size:20px" class="fa">&#xf0e0;</i> Email </b></td><td>: <a id="eml" href="mailto:myohtutnaing007@gmail.com">myohtutnaing007@gmail.com</a></td></tr>
+    <tr><td><b><i style="font-size:20px" class="glyphicon">&#xe052;</i> Programming Competency </b></td><td><p data-toggle="collapse" data-target="#expert"><b class="clicka">: Things I'm capable of ,</b></p> </td></tr>
+    <tr><td></td><td id="expert" class="collapse">
+     J2EE (html, css, java, javascript, jsp, ajax, sql, jquery, bootstrap, and many more )
+   </td></tr>
+    <tr><td></td><td><p  data-toggle="collapse" data-target="#med">:<b class="clicka"> Things with basic knowledge</b></p></td></tr>
+    <tr><td></td><td><div id="med" class="collapse">   Android, C++ , MEAN Stack (Angular, MongoDB, Node), Scratch.  
+  </div></td></tr>
+   </table>
+ 
+
+
+
+
+
+
+       </div>
+    
+  </div>
+  
+     
+    </div>
+    <div id="edu" class="tab-pane fade">
+      <div class="row">
+    <div class="col-sm-5 cardeachone"  data-toggle="modal" data-target="#ucst">
+     <div class="row"><div class="col-md-12"> <img src="ucst.png" width="200" height="200"/> </div></div>
+    <div class="row"><div class="col-md-12"> <h2>University Of Computer Studies, Taunggyi</h2></div></div>
+ 
+    </div>
+        <div class="col-sm-2"></div>
+    <div class="col-sm-5 cardeachtwo"  data-toggle="modal" data-target="#uop">
+      <div class="row"><div class="col-md-12"> <img src="uop.jpg" width="200" height="200"/> </div></div>
+    <div class="row"><div class="col-md-12"> <h3>University Of People <br>
+   ( American-accredited Online University )</h3></div></div>
+   </div>
+  </div>
+    </div>
+    <div id="achi" class="tab-pane fade">
+ <div class="row">
+    <div class="col-sm-5 cardeachone"  data-toggle="modal" data-target="#robo">
+     <div class="row"><div class="col-md-12"> <img src="robol1.jpg" width="200" height="200"/> </div></div>
+    <div class="row"><div class="col-md-12"> <h2>ROBOLEAGUE 2019</h2></div></div>
+  </div>
+        <div class="col-sm-2"></div>
+    <div class="col-sm-5 cardeachtwo" data-toggle="modal" data-target="#itc">
+       <div class="row"><div class="col-md-12"> <img src="itcon.png" width="200" height="200"/> </div></div>
+    <div class="row"><div class="col-md-12"> <h2>Myanmar IT Contest 2019</h2></div></div>
+ </div>
+  </div>     
+  <br><br><div class="row">
+    <div class="col-sm-5 cardeachone"  data-toggle="modal" data-target="#deli">
+    <div class="row"><div class="col-md-12"> <img src="deli.png" width="200" height="200"/> </div></div>
+    <div class="row"><div class="col-md-12"> <h2>Delivery Company</h2></div></div>
+ </div>
+        <div class="col-sm-2"></div>
+    <div class="col-sm-5 cardeachtwo" data-toggle="modal" data-target="#yt">
+      <div class="row"><div class="col-md-12"> <img src="mmio.jpg" width="200" height="200"/> </div></div>
+    <div class="row"><div class="col-md-12"> <h2>Youtube Channel</h2></div></div>
+</div>
+  </div>     
+    </div>
+    <div id="eng" class="tab-pane fade">
+ <div class="row">
+    <div class="col-sm-5 cardeachone"  data-toggle="modal" data-target="#efs">
+    <div class="row"><div class="col-md-12"> <img src="ef.png" width="200" height="200"/> </div></div>
+    <div class="row"><div class="col-md-12"> <h2>EF SET</h2></div></div>
+   </div>
+        <div class="col-sm-2"></div>
+    <div class="col-sm-5 cardeachtwo" data-toggle="modal" data-target="#brit">
+       <div class="row"><div class="col-md-12"> <img src="bri.png" width="200" height="200"/> </div></div>
+    <div class="row"><div class="col-md-12"> <h2>British Council English Score</h2></div></div>
+ </div>
+  </div>   <br><br><div class="row">
+    <div class="col-sm-5 cardeachone"  data-toggle="modal" data-target="#camb">
+     <div class="row"><div class="col-md-12"> <img src="camb.png" width="200" height="200"/> </div></div>
+    <div class="row"><div class="col-md-12"> <h2>Cambridge Assessment English</h2></div></div>
+ </div>
+        <div class="col-sm-2"></div>
+    <div class="col-sm-5 cardeachtwo" data-toggle="modal" data-target="#llll">
+  <div class="row"><div class="col-md-12"> <img src="lascc.jpg" width="200" height="200"/> </div></div>
+    <div class="row"><div class="col-md-12"> <h2>LASC Language Scholastics</h2></div></div>
+    </div>
+  </div>       
+    </div>
+  </div></div>
+<br>
+
+
+
+
+</body>
+</html>
