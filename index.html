@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -15,6 +16,78 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   
   <style>
+ @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    body.dark,
+    body.dark .jumbotron,
+    body.dark .modal-content{
+      background-color: #292c35;
+    }
+
+    body.dark .col-sm-5,
+    body.dark .col-sm-12,
+    body.dark .cardeachone,
+    body.dark .cardeachtwo{
+      box-shadow: 15px 15px #000000;
+    }
+
+    body.dark #hd,
+    body.dark h3,
+    body.dark .modal-title{
+    color: #edf8f7;
+    }
+
+    body.dark a{
+      color: #91d4cf;
+    }
+
+
+    .checkbox {
+      opacity: 0;
+      position: absolute;
+    }
+
+    .checkbox-label {
+      background-color: #111;
+      width: 50px;
+      height: 26px;
+      border-radius: 50px;
+      position: relative;
+      padding: 5px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .fa-moon {
+      color: #f1c40f;
+    }
+
+    .fa-sun {
+      color: #f39c12;
+    }
+
+    .checkbox-label .ball {
+      background-color: #fff;
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      border-radius: 50%;
+      transition: transform 0.2s linear;
+    }
+
+    .checkbox:checked + .checkbox-label .ball {
+      transform: translateX(24px);
+    }
+
   td{
   padding-top:10px;
   }
@@ -127,6 +200,8 @@ background-color:white;}
     background-color:#41B3A3;
      border-radius: 25px;
         box-shadow: 15px 15px #d4d1c9;
+transition: width 0.3s ease;
+width:37%;
      }
      .col-sm-12{
      text-align:left;
@@ -138,6 +213,7 @@ background-color:white;}
           position: relative;
   animation-name: downtu;
   animation-duration: 1s;
+transition: width 0.3s ease
      }
      
 @keyframes downtu {
@@ -169,17 +245,45 @@ background-color:white;}
 	font-size:40px;
 	display:none;
 	}
+
+	.expanded {
+          width: 40%; 
+        }
+
+
+
+.blur {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    transition: filter 0.3s ease-out;
+  }
+
   </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-NsMOxIP5rAkcZl5I91R1uKe1z2Z4rHH6vzyZ+59FViz6QZjFGMXxJxHcX/2DpFhR6MOM6rzk2+1KlbSefxvZoA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 <script>
 
 
 $(document).ready(function(){
+   
+ $('.modal').on('show.bs.modal', function () {
+    $('body > *:not(.modal)').addClass('blur');
+  });
+
+
+  $('.modal').on('hidden.bs.modal', function () {
+    $('body > *:not(.modal)').removeClass('blur');
+  });
+
+
 	var onicon=1;
 	 $(".col-sm-5").hover(function () {
 		    $(this).css({opacity: '0.7'});
-	 },function(){    $(this).css({opacity: '1'});})
+	   	    $(this).addClass('expanded');
+	 },function(){    $(this).css({opacity: '1'});
+			  $(this).removeClass('expanded');
+	})
 	
 
 	$('.cardeachone').css('cursor', 'pointer');
@@ -219,6 +323,15 @@ function () {
 
 })
 });
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+      const checkbox = document.getElementById("checkbox");
+      checkbox.addEventListener("change", function() {
+        document.body.classList.toggle("dark");
+      });
+    });
+
 
 </script>
 
@@ -493,6 +606,7 @@ function () {
   </div>
   
     </div> 
+
 <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -520,7 +634,18 @@ function () {
     
     <div id="logotitle"><kbd>Matthew Mio</kbd></div>
 
-<p style="text-align:right;color:white;font-family:Cursive;opacity: 0.5;">last updated on November 20, 2023</p>
+ 
+<p style="text-align:right;color:white;font-family:Cursive;opacity: 0.5;">last updated on July 11, 2024</p>
+
+<div style="float: right;">
+  <input type="checkbox" class="checkbox" id="checkbox">
+  <label for="checkbox" class="checkbox-label">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+    <span class="ball"></span>
+  </label>
+</div>
+
    </div>
 
  
@@ -528,7 +653,7 @@ function () {
 <div class="jumbotron">
   <div class="container text-center">
  
-    <h1>Matthew's Portfolio</h1>      
+    <h1 id="hd">Matthew's Portfolio</h1>      
     <p class="PULSE">Thanks for taking a peak at my portfolio. Feel free to look around.</p>
      <ul class="nav nav-tabs">
     <li class="active"><a href="#intro">Self-introduction</a></li>
