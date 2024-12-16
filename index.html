@@ -25,6 +25,7 @@
 
     body.dark,
     body.dark .jumbotron,
+body.dark .event-content,
     body.dark .modal-content{
       background-color: #292c35;
     }
@@ -32,12 +33,14 @@
     body.dark .col-sm-5,
     body.dark .col-sm-12,
     body.dark .cardeachone,
+    body.dark .event-content,
     body.dark .cardeachtwo{
       box-shadow: 15px 15px #000000;
     }
 
     body.dark #hd,
     body.dark h3,
+body.dark .event-content,
     body.dark .modal-title{
     color: #edf8f7;
     }
@@ -45,6 +48,7 @@
     body.dark a{
       color: #91d4cf;
     }
+
 
 
     .checkbox {
@@ -258,6 +262,63 @@ transition: width 0.3s ease
     transition: filter 0.3s ease-out;
   }
 
+.timeline-event {
+border-radius: 25px;
+font-size:20px;
+        font-family: 'EB Garamond'
+
+     
+   color:black;
+   width: 60%;
+padding:20px;
+   
+    transition: transform 0.3s ease-in-out; /* Smooth scaling transition */
+}
+
+.timeline-event:hover {
+    transform: scale(1.05); /* Slightly increase the size of the event */
+}
+
+.timeline-event .event-content {
+ border-radius: 25px;
+background-color: white;
+   color:black;
+    display: flex;
+ font-size:18px;
+padding:20px;
+ font-family: 'EB Garamond'
+    gap: 15px;
+ box-shadow: 5px 5px #d4d1c9;
+    transition: transform 0.3s ease-in-out; /* Optional: Adds transition for event content */
+}
+
+.timeline-event:hover .event-content {
+    transform: scale(1.05); /* Slightly increase the size of the content on hover */
+}
+
+/* New Sub-section styling */
+.sub-section {
+      border-radius: 25px;
+    margin-top: 10px; /* Adds space between the main event and sub-sections */
+    overflow: hidden;
+    max-height: 0; /* Initially hidden */
+    opacity: 0; /* Initially hidden */
+    transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out; /* Smooth drop-down and fade */
+}
+
+/* Hover effect on the parent event to reveal sub-section */
+.timeline-event:hover .sub-section {
+    max-height: 800px; /* Expands to show content when hovered */
+    opacity: 1; /* Makes the sub-section visible */
+    transform: translateY(10px); /* Slight downward shift for effect */
+ 
+}
+
+/* Styling for sub-section timeline-events */
+.sub-section .timeline-event {
+    margin-bottom: 15px; /* Adds spacing between the sub-sections */
+}
+
   </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-NsMOxIP5rAkcZl5I91R1uKe1z2Z4rHH6vzyZ+59FViz6QZjFGMXxJxHcX/2DpFhR6MOM6rzk2+1KlbSefxvZoA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -351,7 +412,14 @@ function () {
  <div class="row"><div class="col-md-12"> <img src="ucst1.jpg" width="100%" height="70%"/> </div></div>
  
          <h3>University Of Computer Studies, Taunggyi is a university in Myanmar. I passed the matriculation exam in 2016 and joined the university as a computer science student. I was doing pretty well academically. During my third year of university, all universities all over the country were forced to close due to COVID crisis. Additionally, military coup took place in Myanmar. Since at that time, this university couldn't start till now. </h3>
-         </div>
+        
+
+ <div class="row"><div class="col-md-12"> <img src="trophies.jpg" width="100%" height="70%"/> </div></div>
+ 
+         <h3>Awarded 8 trophies for academic excellence and success in various contests during my time at the university (There are nine trophies in total, and one of them is from my highschool) </h3>
+    
+ </div>
+
         <div class="modal-footer">
         
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -635,7 +703,7 @@ function () {
     <div id="logotitle"><kbd>Matthew Mio</kbd></div>
 
  
-<p style="text-align:right;color:white;font-family:Cursive;opacity: 0.5;">last updated on July 11, 2024</p>
+<p style="text-align:right;color:white;font-family:Cursive;opacity: 0.5;">last updated on December 17, 2024</p>
 
 <div style="float: right;">
   <input type="checkbox" class="checkbox" id="checkbox">
@@ -660,6 +728,7 @@ function () {
     <li><a href="#edu">Academic Education</a></li>
     <li><a href="#achi">Achievements</a></li>
     <li><a href="#eng">English Proficiency</a></li>
+ <li><a href="#timel">Timeline</a></li>
   </ul>
   </div>
 </div>
@@ -682,11 +751,11 @@ function () {
      J2EE (html, css, java, javascript, jsp, ajax, sql, jquery, bootstrap, and many more )
    </td></tr>
     <tr><td></td><td><p  data-toggle="collapse" data-target="#med">:<b class="clicka"> Basic knowledge (Tried)</b></p></td></tr>
-    <tr><td></td><td><div id="med" class="collapse">   Android, C++ , MEAN Stack (Angular, MongoDB, Node), Scratch, Arduino, Kotlin, PHP, Python, Three.js, Basic Video and Photo editing.  
+    <tr><td></td><td><div id="med" class="collapse">   Android, C++ , MEAN Stack (Angular, MongoDB, Node), Scratch, Arduino, Kotlin, PHP, Python, Basic Video and Photo editing.  
   </div></td></tr>
 
 <tr><td></td><td><p  data-toggle="collapse" data-target="#toOls">:<b class="clicka"> Tools </b></p></td></tr>
-    <tr><td></td><td><div id="toOls" class="collapse">   GitHub, Virtual Operating Systems (Ubuntu and MacOS Monterey), Dia (Diagramming Software), JASP (statistical analysis tool), Joomla, CPU Emulator of TECS Software Suite, Logisim, Google Sites, MAMP , Putty, StarUML, MakeBlock, DeepFaceLab, Tor Browser.  
+    <tr><td></td><td><div id="toOls" class="collapse">   GitHub, Virtual Operating Systems (Ubuntu and MacOS Monterey), Dia (Diagramming Software), JASP (statistical analysis tool), Joomla, CPU Emulator of TECS Software Suite, Logisim, Google Sites, MAMP , Putty, StarUML, MakeBlock, Tor Browser.  
   </div></td></tr>
 
 
@@ -740,6 +809,164 @@ function () {
    
   </div>     
     </div>
+
+<div id="timel" class="tab-pane fade">
+ <div class="row">
+    <div class="col-sm-12">
+ <div class="timeline">
+    <div class="timeline-event">
+      
+        <div class="event-content">
+          
+            <p>Joined University of Computer Studies, Taunggyi (2018-2020)</p>
+            <img src="ucst1.jpg" width="20%" height="20%"/">
+        </div>
+ <!-- Sub-section -->
+        <div class="sub-section">
+
+ <div class="timeline-event">
+               
+                <div class="event-content" data-toggle="modal" data-target="#ucst">
+                    <p>Awards</p>
+		
+               
+              
+                </div>
+            </div>
+
+            <div class="timeline-event">
+               
+                <div class="event-content" data-toggle="modal" data-target="#robo">
+                    <p>Roboleague 2019</p>
+		<img src="robol1.jpg" width="20%" height="20%"/">
+               
+              
+                </div>
+            </div>
+            <div class="timeline-event">
+              
+                <div class="event-content" data-toggle="modal" data-target="#itc">
+                    <p>Myanmar IT Contest 2019</p>
+                    <img src="itcon.png" width="20%" height="20%"/">
+                  
+                </div>
+            </div>
+
+        
+ 
+        </div>
+ </div>
+
+  
+</div>  
+
+<div class="timeline">
+    <div class="timeline-event">
+      
+        <div class="event-content">
+          
+            <p>Dropped out of university due to COVID-19 and Military Coup (2020-2022)</p>
+            
+        </div>
+ <!-- Sub-section -->
+        <div class="sub-section">
+           <div class="timeline-event">
+               
+                <div class="event-content" data-toggle="modal" data-target="#efs">
+                    <p>EF SET</p>
+                <img src="ef.png" width="20%" height="20%"/">
+              
+                </div>
+            </div>
+            <div class="timeline-event">
+              
+                <div class="event-content" data-toggle="modal" data-target="#brit">
+                    <p>British Council English Score</p>
+                     <img src="bri.png" width="20%" height="20%"/">
+                  
+                </div>
+            </div>
+  <div class="timeline-event">
+               
+                <div class="event-content" data-toggle="modal" data-target="#camb">
+                    <p>Cambridge Assessment English</p>
+                <img src="camb.png" width="20%" height="20%"/">
+              
+                </div>
+            </div>
+            <div class="timeline-event">
+              
+                <div class="event-content" data-toggle="modal" data-target="#llll">
+                    <p>LASC English Scholastics</p>
+                     <img src="lascc.jpg" width="20%" height="20%"/">
+                  
+                </div>
+            </div>
+
+
+        </div>
+ </div>
+
+  
+</div> 
+
+<div class="timeline">
+    <div class="timeline-event">
+      
+        <div class="event-content">
+          
+            <p>Worked in a freelance Web Development Team (2019-2021)</p>
+           
+        </div>
+ <!-- Sub-section -->
+        <div class="sub-section">
+           <div class="timeline-event">
+               
+                <div class="event-content" data-toggle="modal" data-target="#deli">
+                    <p>Delivery Management System</p>
+ <img src="deli.png" width="20%" height="20%"/">
+               
+              
+                </div>
+            </div>
+
+        </div>
+ </div>
+
+  
+</div> 
+
+
+<div class="timeline">
+    <div class="timeline-event">
+      
+        <div class="event-content">
+          
+            <p>Joined University of the People (2022-2025)</p>
+            <img src="uop.jpg" width="10%" height="10%"/">
+        </div>
+ <!-- Sub-section -->
+        <div class="sub-section">
+            <div class="timeline-event">
+               
+                <div class="event-content" data-toggle="modal" data-target="#uop">
+                    <p>A Bachelor's degree in Computer Science</p>
+               
+              
+                </div>
+            </div>
+          
+           
+        </div>
+ </div>
+
+  
+</div> 
+  </div>
+   
+</div>    </div>
+
+
     <div id="eng" class="tab-pane fade">
  <div class="row">
     <div class="col-sm-5 cardeachone"  data-toggle="modal" data-target="#efs">
