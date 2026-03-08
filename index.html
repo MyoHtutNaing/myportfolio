@@ -352,9 +352,16 @@ $(document).ready(function(){
 		    $(this).tab('show');
 		  });
 
-		  $('#openCpe601').on('click', function () {
-    $('.modal').modal('hide');     // close current modal
-    $('#cpe601').modal('show');    // open new modal
+		 $('#openCpe601').on('click', function () {
+
+    // when current modal finishes closing
+    $('.modal.show').on('hidden.bs.modal', function () {
+        $('#cpe601').modal('show');
+    });
+
+    // close current modal
+    $('.modal.show').modal('hide');
+
 });
 	 
  $("#matthewlogo").hover(function () {
@@ -1478,6 +1485,7 @@ Team Member: Adrian Musinge (Senior Thesis Student) </h3><br>
 
 </body>
 </html>
+
 
 
 
