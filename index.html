@@ -351,6 +351,11 @@ $(document).ready(function(){
 	 $(".nav-tabs a").click(function(){
 		    $(this).tab('show');
 		  });
+
+		  $('#openCpe601').on('click', function () {
+    $('.modal').modal('hide');     // close current modal
+    $('#cpe601').modal('show');    // open new modal
+});
 	 
  $("#matthewlogo").hover(function () {
 	onicon=0;
@@ -464,6 +469,7 @@ function () {
         </div>
         <div class="modal-body">
  <div class="row"><div class="col-md-12"> <img src="thesis.png" width="100%" height="70%"/> </div></div>
+			<h3>Financial Prediction and Classification using Machine Learning</h3>
  <h3>Thesis Advisor : <a href="https://www.cpe.kmutt.ac.th/en/staff/naruemon-wattanapongsakorn/">Dr. Naruemon Wattanapongsakorn</a></h3>
          <hr> </hr>
 
@@ -673,7 +679,9 @@ Team Member: Adrian Musinge (Senior Thesis Student) </h3><br>
 				<h3 class="modal-title">GPAX : 3.85</h3> 
 <h3 class="modal-title">Courses :</h3> 
  
-         <h4> CPE 600 Research Methodology And Technical Research Writing <br> <div data-toggle="modal" data-target="#cpe601">CPE 601 Computer Engineering Seminar </div><br> CPE 613 Optimization Methods <br> CPE 632 Human Computer Interaction
+         <h4> CPE 600 Research Methodology And Technical Research Writing <br> 
+			 <div id="openCpe601" style="cursor:pointer;"> CPE 601 Computer Engineering Seminar</div>
+			 <br> CPE 613 Optimization Methods <br> CPE 632 Human Computer Interaction
 </h4> <hr>
 				         <h4> CPE 653 Digital Image Processing And Analysis <br> CPE 663 Special Topic III : Digital Educational Game Design <br> 5-Credit Thesis
 </h4>
@@ -1470,6 +1478,7 @@ Team Member: Adrian Musinge (Senior Thesis Student) </h3><br>
 
 </body>
 </html>
+
 
 
 
