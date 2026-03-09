@@ -352,17 +352,46 @@ $(document).ready(function(){
 		    $(this).tab('show');
 		  });
 
-		 $('#openCpe601').on('click', function () {
-
-    // when current modal finishes closing
-    $('.modal.show').on('hidden.bs.modal', function () {
+		$('#openCpe601').on('click', function () {
+    setTimeout(function () {
         $('#cpe601').modal('show');
-    });
-
-    // close current modal
-    $('.modal.show').modal('hide');
-
+    }, 400);
 });
+
+$('#openCpe613').on('click', function () {
+    setTimeout(function () {
+        $('#cpe613').modal('show');
+    }, 400);
+});
+
+
+$('#openCpe632').on('click', function () {
+    setTimeout(function () {
+        $('#cpe632').modal('show');
+    }, 400);
+});
+
+$('#openCpe653').on('click', function () {
+    setTimeout(function () {
+        $('#cpe653').modal('show');
+    }, 400);
+});
+
+
+$('#openCpe663').on('click', function () {
+    setTimeout(function () {
+        $('#cpe663').modal('show');
+    }, 400);
+});
+
+
+$('#openThesis').on('click', function () {
+    setTimeout(function () {
+        $('#thesis').modal('show');
+    }, 400);
+});
+
+
 	 
  $("#matthewlogo").hover(function () {
 	onicon=0;
@@ -465,7 +494,7 @@ function () {
   
     </div> 
 
-	<div class="modal fade" id="thesis">
+	<div class="modal fade" id="thesis" tabindex="-1">
     <div class="modal-dialog">
     
       <!-- Modal content-->
@@ -554,7 +583,7 @@ Team Member: Adrian Musinge (Senior Thesis Student) </h3><br>
   
     </div> 
 
-	<div class="modal fade" id="cpe601">
+	<div class="modal fade" id="cpe601" tabindex="-1">
     <div class="modal-dialog">
     
       <!-- Modal content-->
@@ -579,7 +608,115 @@ Team Member: Adrian Musinge (Senior Thesis Student) </h3><br>
   
     </div> 
 	
+        <div class="modal fade" id="cpe632" tabindex="-1">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <center> <h2 class="modal-title">Course Materials Organizer (CMO) – HCI UX Design Project</h2></center>
+        </div>
+        <div class="modal-body">
+ 
+         <h3>Designed a web-based academic management system to help students organize course materials, manage deadlines, and reduce duplicate files across multiple devices. The system was created through an HCI design process including user research, personas, storyboards, wireframing, and prototyping, and implemented as a high-fidelity Figma prototype. Key features include centralized file management, course-based categorization, duplicate file detection, deadline reminders, and electricity-aware task planning for students studying in environments with unstable power. The design was evaluated using Nielsen’s usability heuristics and user testing, leading to iterative UI improvements that enhanced learnability, navigation clarity, and task visibility.</h3>
+<br>
+<a href="https://www.figma.com/proto/0UEpXCasGyV13crfY3twCP/Untitled?node-id=0-1&t=rCE4zPkFa8ShM3sn-1">Figma Prototype Link </a>
+       
+ </div>
+
+        <div class="modal-footer">
         
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      
+  </div>
+  </div>
+  
+    </div> 
+
+<div class="modal fade" id="cpe613" tabindex="-1">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <center> <h2 class="modal-title">Crop Allocation Optimization using NSGA-II</h2></center>
+        </div>
+        <div class="modal-body">
+ 
+         <h3>Developed a multi-objective optimization model to determine the best allocation of farmland among 30 crop types while maximizing profit and minimizing water usage. Using the NSGA-II genetic algorithm implemented in Python, the system evaluates different land allocation scenarios across 14 plots (100 hectares total) under constraints for land, water, and fertilizer. The algorithm generates Pareto-optimal solutions that show trade-offs between profit and resource consumption.</h3>
+       
+ </div>
+
+        <div class="modal-footer">
+        
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      
+  </div>
+  </div>
+  
+    </div> 
+
+<div class="modal fade" id="cpe653" tabindex="-1">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <center> <h2 class="modal-title">Retinal Image Contrast Enhancement using Fuzzy Logic and CLAHE</h2></center>
+        </div>
+        <div class="modal-body">
+ 
+         <h3>Presented and analyzed a research paper proposing a hybrid retinal image enhancement method combining Fuzzy Contrast Enhancement (FCE) and Contrast Limited Adaptive Histogram Equalization (CLAHE) to improve the visibility of retinal blood vessels for medical diagnosis. The approach enhances both global and local contrast by applying fuzzy logic with Gaussian membership functions and adaptive histogram equalization, followed by linear blending and yellow-scale rendering to improve human visual interpretation. The method improves the detection of small capillaries in retinal images affected by noise, supporting more accurate early diagnosis of ocular diseases such as diabetic retinopathy and macular degeneration.</h3>
+       
+       <div class="row"><div class="col-md-12"> <img src="retina.png" width="100%" height="70%"/> </div></div>
+ </div>
+
+        <div class="modal-footer">
+        
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      
+  </div>
+  </div>
+  
+    </div> 
+
+<div class="modal fade" id="cpe663" tabindex="-1">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <center> <h2 class="modal-title">Tree Kingdom Defender – Educational Data Structures Game</h2></center>
+        </div>
+        <div class="modal-body">
+ 
+         <h3>Tree Kingdom Defender is a tower defense educational game designed to teach Binary Search Tree (BST) concepts through gameplay. Players defend a kingdom by building towers represented as tree nodes, where each tower is created by inserting a numeric value that must follow BST rules relative to its parent node. The chosen value determines the tower’s health points, and enemies attack specific tiles in waves. Players must strategically insert or delete nodes to maintain a valid BST structure, as missing towers allow enemies to reach the root and reduce the kingdom’s lives. The game combines algorithmic thinking, strategy, and interactive learning to help players understand binary tree structures in an engaging way.</h3>
+
+       <div class="row"><div class="col-md-12"> <img src="game1.png" width="100%" height="70%"/> </div></div>
+<div class="row"><div class="col-md-12"> <img src="game2.png" width="100%" height="70%"/> </div></div>
+
+ </div>
+
+        <div class="modal-footer">
+        
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      
+  </div>
+  </div>
+  
+    </div> 
+
+
+
+
 <div class="modal fade" id="uop">
     <div class="modal-dialog">
     
@@ -686,12 +823,32 @@ Team Member: Adrian Musinge (Senior Thesis Student) </h3><br>
 				<h3 class="modal-title">GPAX : 3.85</h3> 
 <h3 class="modal-title">Courses :</h3> 
  
-         <a href="https://sites.google.com/view/learningjournalp1-68070701703">CPE 600 Research Methodology And Technical Research Writing </a><br> 
-			 <div id="openCpe601" style="cursor:pointer;"> CPE 601 Computer Engineering Seminar</div>
-			 <br> CPE 613 Optimization Methods <br> CPE 632 Human Computer Interaction
-</h4> <hr>
-				         <h4> CPE 653 Digital Image Processing And Analysis <br> CPE 663 Special Topic III : Digital Educational Game Design <br> 5-Credit Thesis
-</h4>
+         <a href="https://sites.google.com/view/learningjournalp1-68070701703">CPE 600 Research Methodology And Technical Research Writing </a><br> <br>
+			<div id="openCpe601" data-dismiss="modal" style="cursor:pointer;color:#0d6efd;">
+    CPE 601 Computer Engineering Seminar
+</div>
+			 <br>
+<div id="openCpe613" data-dismiss="modal" style="cursor:pointer;color:#0d6efd;">
+    CPE 613 Optimization Methods
+</div>
+  <br>
+<div id="openCpe632" data-dismiss="modal" style="cursor:pointer;color:#0d6efd;">
+    CPE 632 Human Computer Interaction
+</div>
+ 
+ <hr>
+				        
+<div id="openCpe653" data-dismiss="modal" style="cursor:pointer;color:#0d6efd;">
+    CPE 653 Digital Image Processing And Analysis
+</div> <br>
+<div id="openCpe663" data-dismiss="modal" style="cursor:pointer;color:#0d6efd;">
+    CPE 663 Special Topic III : Digital Educational Game Design
+</div>
+  <br> 
+<div id="openThesis" data-dismiss="modal" style="cursor:pointer;color:#0d6efd;">
+    5-Credit Thesis
+</div>
+
 		  </div>
 		  
         <div class="modal-footer">
