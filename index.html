@@ -542,7 +542,15 @@ function () {
  <h3>Thesis Advisor: <a href="https://www.cpe.kmutt.ac.th/en/staff/naruemon-wattanapongsakorn/">Dr. Naruemon Wattanapongsakorn</a> <br>
 Team Member: Adrian Musinge (Senior Thesis Student) </h3><br> 
 	 <h4>I will be participating in the 23rd International Joint Conference on Computer Science and Software Engineering (JCSSE 2026), an international conference hosted in Bangkok, Thailand, and co-organized by King Mongkut’s University of Technology Thonburi and the IEEE Thailand Section. The conference brings together researchers and practitioners to share advances in computer science and software engineering, with accepted papers submitted to the IEEE Xplore Digital Library.</h4>
-         <hr> </hr>
+         <hr>
+
+				 <h3>Updated: Credit Risk Assessment: Multi-Class Ensemble Architecture with SHAP Interpretability</h3>
+							 <h4>Methodology & Data Preprocessing: Developed an end-to-end machine learning pipeline for multi-class credit scoring mapped to CFPB risk tiers: Class 0 (Good/Prime $\ge$ 660), Class 1 (Poor/High-Risk $<$ 620), and Class 2 (Standard/Sub-Prime 620–659). To prevent data leakage and maintain individual behavior profiles across 100,000 records, missing data was resolved using localized customer-level longitudinal median and mode imputations (Customer_ID grouping). Numeric features were stabilized using Z-score Standardization (Mean=0, Std=1), categorical features were Label Encoded, and the dataset was divided via an 80/20 stratified split.Feature Engineering & Model Architecture: Engineered a continuous integer feature for credit longevity by programmatically parsing Credit_History_Age strings ("X Years and Y Months"), and constructed a structural financial health metric by calculating a continuous Debt-to-Income Ratio ($\text{Outstanding\_Debt} \div \text{Annual\_Income}$). To model complex non-linear interactions, three ensemble structures were optimized: a parallel Random Forest (RF) of 200 unconstrained decision trees; LightGBM utilizing leaf-wise growth with 200 estimators, 0.1 learning rate, and 0.8 sub-sample ratio; and XGBoost utilizing a level-wise gradient-boosted pipeline fine-tuned via Grid Search with 200 trees and a max depth of 6.Evaluation & SHAP Explainability: Evaluated using Stratified 5-Fold Cross-Validation with macro-averaging across precision, recall, and F1-score to equally weight minority classes. Random Forest achieved the highest generalization with 80% global accuracy and a 0.9167 multi-class ROC-AUC score, critically yielding the lowest "False Good" lending rate compared to LightGBM (76% accuracy, 0.8876 ROC-AUC) and XGBoost (74% accuracy, 0.8769 ROC-AUC). To satisfy financial regulatory compliance, SHAP (SHapley Additive Explanations) was integrated to calculate mathematically verified feature attributions based on cooperative game theory, identifying Credit_Mix, Outstanding_Debt, Interest_Rate, and Delay_from_due_date as the primary decision drivers across all risk classes.</h4>
+ <div class="row"><div class="col-md-12"> <img src="creditscore1.png" width="100%" height="70%"/> </div></div>
+ <div class="row"><div class="col-md-12"> <img src="creditscore2.png" width="100%" height="70%"/> </div></div>
+ <div class="row"><div class="col-md-12"> <img src="creditscore3.png" width="100%" height="70%"/> </div></div>
+
+			<hr>
 
 
  </div>
